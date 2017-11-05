@@ -9,9 +9,13 @@ import {HomePage} from '../pages/home/home';
 import {LoginPage} from '../pages/login/login';
 import {ListaradministradorPage} from '../pages/listaradministrador/listaradministrador';
 import {CrearadministradorPage} from '../pages/crearadministrador/crearadministrador';
-import {AdministradorProvider} from '../providers/administrador/administrador';
 import {ModificaradministradorPage} from '../pages/modificaradministrador/modificaradministrador';
+import {ListarestudiantePage} from '../pages/listarestudiante/listarestudiante';
+import {CrearestudiantePage} from '../pages/crearestudiante/crearestudiante';
+import {ModificarestudiantePage} from '../pages/modificarestudiante/modificarestudiante';
+import {AdministradorProvider} from '../providers/administrador/administrador';
 import {LoginProvider} from '../providers/login/login';
+import {EstudianteProvider} from '../providers/estudiante/estudiante';
 
 @NgModule({
   declarations: [
@@ -19,8 +23,11 @@ import {LoginProvider} from '../providers/login/login';
     HomePage,
     LoginPage,
     ListaradministradorPage,
+    ListarestudiantePage,
     CrearadministradorPage,
-    ModificaradministradorPage
+    CrearestudiantePage,
+    ModificaradministradorPage,
+    ModificarestudiantePage
   ],
   imports: [
     BrowserModule,
@@ -33,15 +40,19 @@ import {LoginProvider} from '../providers/login/login';
     HomePage,
     LoginPage,
     ListaradministradorPage,
+    ListarestudiantePage,
     CrearadministradorPage,
-    ModificaradministradorPage
+    CrearestudiantePage,
+    ModificaradministradorPage,
+    ModificarestudiantePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AdministradorProvider,
-    LoginProvider
+    LoginProvider,
+    EstudianteProvider
   ]
 })
 export class AppModule {

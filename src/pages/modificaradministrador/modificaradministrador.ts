@@ -43,6 +43,8 @@ export class ModificaradministradorPage {
       usuario: ['', Validators.required],
       clave: ['', Validators.required]
     });
+    this.frmAdministrador.get('codigo').disable();
+    this.frmAdministrador.get('sexo').setValue(this.datos.Sexo);
   }
 
   public modificarAdministrador() {
@@ -50,7 +52,7 @@ export class ModificaradministradorPage {
       this.submitAttempt = true;
     } else {
       this.Carga();
-      this.http.modificarAdministrador(this.frmAdministrador.value.codigo, this.frmAdministrador.value.nombre, this.frmAdministrador.value.apellido, this.frmAdministrador.value.sexo, this.frmAdministrador.value.edad, this.frmAdministrador.value.correo, this.frmAdministrador.value.usuario, this.frmAdministrador.value.clave).then(res => {
+      this.http.modificarAdministrador(this.frmAdministrador.get('codigo').value, this.frmAdministrador.value.nombre, this.frmAdministrador.value.apellido, this.frmAdministrador.value.sexo, this.frmAdministrador.value.edad, this.frmAdministrador.value.correo, this.frmAdministrador.value.usuario, this.frmAdministrador.value.clave).then(res => {
           this.administradores = res;
           console.log(res);
           if (this.administradores[0].estado == "Registro modificado") {

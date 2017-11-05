@@ -4,21 +4,20 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 /*
-  Generated class for the AdministradorProvider provider.
+  Generated class for the EstudianteProvider provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
-export class AdministradorProvider {
-  datos: any;
-  path: string = 'http://localhost:8084/CampusFramework_Original/AdministradorServlet';
+export class EstudianteProvider {
+  path: string = 'http://localhost:8084/CampusFramework_Original/AlumnoServlet';
 
   constructor(public http: Http) {
     console.log('Hello AdministradorProvider Provider');
   }
 
-  cargarAdministrador() {
+  cargarEstudiante() {
     return this.http
       .get(this.path + '?op=2')
       .map(res => res.json(),
@@ -40,7 +39,7 @@ export class AdministradorProvider {
       .toPromise();
   }
 
-  insertarAdministrador(codigo, nombre, apellido, sexo, edad, correo, usuario, clave) {
+  insertarEstudiante(codigo, nombre, apellido, sexo, edad, correo, usuario, clave) {
     return this.http
       .get(this.path + '?op=3&txtcod=' + codigo + '&txtnom=' + nombre + '&txtape=' + apellido + '&txtsex=' + sexo
         + '&txteda=' + edad + '&txtcor=' + correo + '&txtid=' + usuario + '&txtpass=' + clave)
@@ -52,7 +51,7 @@ export class AdministradorProvider {
       .toPromise();
   }
 
-  modificarAdministrador(codigo, nombre, apellido, sexo, edad, correo, usuario, clave) {
+  modificarEstudiante(codigo, nombre, apellido, sexo, edad, correo, usuario, clave) {
     return this.http
       .get(this.path + '?op=4&txtcod=' + codigo + '&txtnom=' + nombre + '&txtape=' + apellido + '&txtsex=' + sexo
         + '&txteda=' + edad + '&txtcor=' + correo + '&txtid=' + usuario + '&txtpass=' + clave)
@@ -64,7 +63,7 @@ export class AdministradorProvider {
       .toPromise();
   }
 
-  eliminarAdministrador(codigo){
+  eliminarEstudiante(codigo){
     return this.http
       .get(this.path+'?op=5&cod=' + codigo)
       .map(res => res.json(),
@@ -74,5 +73,4 @@ export class AdministradorProvider {
       )
       .toPromise();
   }
-
 }

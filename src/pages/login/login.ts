@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
 import {LoginProvider} from '../../providers/login/login';
-import {ListaradministradorPage} from '../listaradministrador/listaradministrador';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {ListaradministradorPage} from "../listaradministrador/listaradministrador";
 
 /**
  * Generated class for the LoginPage page.

@@ -1,0 +1,11 @@
+commit 0e6aa3915a2c21c260848f2c252a3702e8bb6c49
+Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
+Date:   Sat Nov 4 18:31:08 2017 -0500
+
+    Mantenimiento Administrador
+
+commit 28cfeb7e17b158d7defae7159638dec8e37befd4
+Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
+Date:   Tue Oct 24 20:27:17 2017 -0500
+
+    Initial commit

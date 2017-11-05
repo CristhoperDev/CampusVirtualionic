@@ -19,10 +19,12 @@ import {ListaradministradorPage} from "../listaradministrador/listaradministrado
 export class CrearadministradorPage {
   loader: any;
   administradores: any[];
+  codigos: any[];
   frmAdministrador: FormGroup;
   submitAttempt: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public http: AdministradorProvider, public loadingCtrl: LoadingController) {
+    this.generarCodigo();
     this.frmAdministrador = formBuilder.group({
       codigo: ['', Validators.required],
       nombre: ['', Validators.required],
@@ -33,6 +35,17 @@ export class CrearadministradorPage {
       usuario: ['', Validators.required],
       clave: ['', Validators.required]
     });
+    this.frmAdministrador.get('codigo').disable();
+  }
+
+  generarCodigo() {
+    this.http.generarCodigo().then(res => {
+        this.codigos = res;
+        console.log(this.codigos);
+      },
+      error => {
+        console.log(error);
+      });
   }
 
   public insertarAdministrador() {
@@ -40,7 +53,7 @@ export class CrearadministradorPage {
       this.submitAttempt = true;
     } else {
       this.Carga();
-      this.http.insertarAdministrador(this.frmAdministrador.value.codigo, this.frmAdministrador.value.nombre, this.frmAdministrador.value.apellido, this.frmAdministrador.value.sexo, this.frmAdministrador.value.edad, this.frmAdministrador.value.correo, this.frmAdministrador.value.usuario, this.frmAdministrador.value.clave).then(res => {
+      this.http.insertarAdministrador(this.frmAdministrador.get('codigo').value, this.frmAdministrador.value.nombre, this.frmAdministrador.value.apellido, this.frmAdministrador.value.sexo, this.frmAdministrador.value.edad, this.frmAdministrador.value.correo, this.frmAdministrador.value.usuario, this.frmAdministrador.value.clave).then(res => {
           this.administradores = res;
           console.log(res);
           if (this.administradores[0].estado == "Registro agregado") {

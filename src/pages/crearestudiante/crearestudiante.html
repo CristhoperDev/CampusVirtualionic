@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Crear Administrador</ion-title>
+    <ion-title>Crear Estudiante</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,14 +14,14 @@
 <ion-content padding>
   <p *ngIf="submitAttempt" style="color: #ea6153;">Complete los campos.</p>
   <ion-list>
-    <form [formGroup]="frmAdministrador" >
+    <form [formGroup]="frmEstudiante" >
       <ion-item>
         <ion-label floating>Codigo:</ion-label>
-        <ion-input *ngFor="let cod of codigos" formControlName="codigo" aria-required type="number" value="{{ cod.estado }}"></ion-input>
+        <ion-input *ngFor="let cod of codigos" formControlName="codigo" type="number" value="{{ cod.estado }}"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Nombre:</ion-label>
-        <ion-input formControlName="nombre" type="text" placeholder="Nombre"></ion-input>
+        <ion-input formControlName="nombre" type="text" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Apellido:</ion-label>
@@ -52,6 +52,6 @@
       </ion-item>
     </form>
 
-    <button ion-button (click)="insertarAdministrador()">Insertar</button>
+    <button ion-button (click)="insertarEstudiante()">Insertar</button>
   </ion-list>
 </ion-content>

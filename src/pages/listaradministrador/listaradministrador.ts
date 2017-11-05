@@ -44,7 +44,7 @@ export class ListaradministradorPage {
     this.navCtrl.push(ModificaradministradorPage, {administradores: administradores});
   }
 
-  eliminarAdministrador(codigo: Number) {
+  eliminarAdministrador(codigo: number) {
     this.Carga();
     this.http.eliminarAdministrador(codigo).then(res => {
         this.administradores = res;
