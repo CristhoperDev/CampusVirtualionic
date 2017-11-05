@@ -1,3 +1,9 @@
+commit f67df0f51a86a63e00ae64e8ffe9fe661f7ef7f4
+Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
+Date:   Sat Nov 4 22:24:17 2017 -0500
+
+    Estudiante y Administrador Completo
+
 commit 0e6aa3915a2c21c260848f2c252a3702e8bb6c49
 Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
 Date:   Sat Nov 4 18:31:08 2017 -0500
