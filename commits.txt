@@ -1,3 +1,15 @@
+commit 9c30f23ab4255682c9467a233601bc9c6d91de1b
+Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
+Date:   Thu Nov 9 18:23:57 2017 -0500
+
+    Actividad
+
+commit c650bce258ff1351a686b59ae5c5fb98899abb57
+Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
+Date:   Sat Nov 4 22:25:58 2017 -0500
+
+    completo
+
 commit f67df0f51a86a63e00ae64e8ffe9fe661f7ef7f4
 Author: Cristhoper Alvarez <iCrisamxD259@gmail.com>
 Date:   Sat Nov 4 22:24:17 2017 -0500
