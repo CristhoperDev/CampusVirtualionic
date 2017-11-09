@@ -13,9 +13,13 @@ import {ModificaradministradorPage} from '../pages/modificaradministrador/modifi
 import {ListarestudiantePage} from '../pages/listarestudiante/listarestudiante';
 import {CrearestudiantePage} from '../pages/crearestudiante/crearestudiante';
 import {ModificarestudiantePage} from '../pages/modificarestudiante/modificarestudiante';
+import {ListaractividadPage} from '../pages/listaractividad/listaractividad';
+import {CrearactividadPage} from '../pages/crearactividad/crearactividad';
+import {ModificaractividadPage} from '../pages/modificaractividad/modificaractividad';
 import {AdministradorProvider} from '../providers/administrador/administrador';
 import {LoginProvider} from '../providers/login/login';
 import {EstudianteProvider} from '../providers/estudiante/estudiante';
+import {ActividadProvider} from '../providers/actividad/actividad';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import {EstudianteProvider} from '../providers/estudiante/estudiante';
     CrearadministradorPage,
     CrearestudiantePage,
     ModificaradministradorPage,
-    ModificarestudiantePage
+    ModificarestudiantePage,
+    ListaractividadPage,
+    CrearactividadPage,
+    ModificaractividadPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,10 @@ import {EstudianteProvider} from '../providers/estudiante/estudiante';
     CrearadministradorPage,
     CrearestudiantePage,
     ModificaradministradorPage,
-    ModificarestudiantePage
+    ModificarestudiantePage,
+    ListaractividadPage,
+    CrearactividadPage,
+    ModificaractividadPage
   ],
   providers: [
     StatusBar,
@@ -52,7 +62,8 @@ import {EstudianteProvider} from '../providers/estudiante/estudiante';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AdministradorProvider,
     LoginProvider,
-    EstudianteProvider
+    EstudianteProvider,
+    ActividadProvider
   ]
 })
 export class AppModule {
