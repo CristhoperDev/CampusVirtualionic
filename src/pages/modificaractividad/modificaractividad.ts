@@ -42,10 +42,6 @@ export class ModificaractividadPage {
     this.frmActividad.get('estado').setValue(this.datos.Estado);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ModificaractividadPage');
-  }
-
   public modificarActividad() {
     if (!this.frmActividad.valid) {
       this.submitAttempt = true;
