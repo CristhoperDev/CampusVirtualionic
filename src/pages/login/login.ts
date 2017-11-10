@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {IonicPage, LoadingController, NavController, NavParams} from 'ionic-angular';
 import {LoginProvider} from '../../providers/login/login';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {ListarmatriculaPage} from "../listarmatricula/listarmatricula";
+import {ListarprofesorPage} from "../listarprofesor/listarprofesor";
 
 /**
  * Generated class for the LoginPage page.
@@ -38,7 +38,7 @@ export class LoginPage {
         this.login = res;
         console.log(res);
         if (this.login[0].estado == "1") {
-          this.navCtrl.push(ListarmatriculaPage);
+          this.navCtrl.push(ListarprofesorPage);
         }
         this.loader.dismiss();
       })
