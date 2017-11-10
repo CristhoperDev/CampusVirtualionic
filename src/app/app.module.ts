@@ -19,11 +19,15 @@ import {ModificaractividadPage} from '../pages/modificaractividad/modificaractiv
 import {ListarpagoPage} from '../pages/listarpago/listarpago';
 import {CrearpagoPage} from '../pages/crearpago/crearpago';
 import {ModificarpagoPage} from '../pages/modificarpago/modificarpago';
+import {ListarmatriculaPage} from '../pages/listarmatricula/listarmatricula';
+import {CrearmatriculaPage} from '../pages/crearmatricula/crearmatricula';
+import {ModificarmatriculaPage} from '../pages/modificarmatricula/modificarmatricula';
 import {AdministradorProvider} from '../providers/administrador/administrador';
 import {LoginProvider} from '../providers/login/login';
 import {EstudianteProvider} from '../providers/estudiante/estudiante';
 import {ActividadProvider} from '../providers/actividad/actividad';
 import {PagoProvider} from '../providers/pago/pago';
+import {MatriculaProvider} from '../providers/matricula/matricula';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,10 @@ import {PagoProvider} from '../providers/pago/pago';
     ModificaractividadPage,
     ListarpagoPage,
     CrearpagoPage,
-    ModificarpagoPage
+    ModificarpagoPage,
+    ListarmatriculaPage,
+    CrearmatriculaPage,
+    ModificarmatriculaPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +71,10 @@ import {PagoProvider} from '../providers/pago/pago';
     ModificaractividadPage,
     ListarpagoPage,
     CrearpagoPage,
-    ModificarpagoPage
+    ModificarpagoPage,
+    ListarmatriculaPage,
+    CrearmatriculaPage,
+    ModificarmatriculaPage
   ],
   providers: [
     StatusBar,
@@ -74,7 +84,8 @@ import {PagoProvider} from '../providers/pago/pago';
     LoginProvider,
     EstudianteProvider,
     ActividadProvider,
-    PagoProvider
+    PagoProvider,
+    MatriculaProvider
   ]
 })
 export class AppModule {
