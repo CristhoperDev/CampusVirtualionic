@@ -56,7 +56,7 @@ export class CrearestudiantePage {
       this.http.insertarEstudiante(this.frmEstudiante.get('codigo').value, this.frmEstudiante.value.nombre, this.frmEstudiante.value.apellido, this.frmEstudiante.value.sexo, this.frmEstudiante.value.edad, this.frmEstudiante.value.correo, this.frmEstudiante.value.usuario, this.frmEstudiante.value.clave).then(res => {
           this.estudiantes = res;
           console.log(res);
-          if (this.estudiantes[0].estado == "Registro insertado") {
+          if (this.estudiantes[0].estado == "Registro Insertado") {
             this.navCtrl.popTo(ListarestudiantePage);
           }
           this.loader.dismiss();

@@ -56,7 +56,7 @@ export class CrearadministradorPage {
       this.http.insertarAdministrador(this.frmAdministrador.get('codigo').value, this.frmAdministrador.value.nombre, this.frmAdministrador.value.apellido, this.frmAdministrador.value.sexo, this.frmAdministrador.value.edad, this.frmAdministrador.value.correo, this.frmAdministrador.value.usuario, this.frmAdministrador.value.clave).then(res => {
           this.administradores = res;
           console.log(res);
-          if (this.administradores[0].estado == "Registro agregado") {
+          if (this.administradores[0].estado == "Registro Insertado") {
             this.navCtrl.popTo(ListaradministradorPage);
           }
           this.loader.dismiss();
